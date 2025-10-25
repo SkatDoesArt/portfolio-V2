@@ -1,28 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
-// 🔹 Navbar Active Link on Scroll
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-list a");
-const heroSubtitle = document.getElementById('profession-rotation');
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-list a");
 
-window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-    if (scrollY >= sectionTop) current = section.getAttribute("id");
-    });
+    //state effect on scroll
+    function updateActiveLink() {
+        let currentSection = "";
 
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= (sectionTop - 150)) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(currentSection)) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    updateActiveLink();
+
+    window.addEventListener("scroll", updateActiveLink);
+
+    // clics sur les liens de navigation
     navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
+        link.addEventListener('click', function(e) {
+            navLinks.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+        });
     });
-});
 
-// 🔹 Header Background Change on Scroll
-window.addEventListener("scroll", () => {
-    const header = document.querySelector(".header");
-    header.style.backgroundColor = window.scrollY > 50 ? "#020411f1" : "#020411d2";
-});
-
+const heroSubtitle = document.getElementById('profession-rotation');
     // Professions for typewriter effect
     const professions = [
         'A Bachelor IT Student',
@@ -63,6 +76,5 @@ window.addEventListener("scroll", () => {
         setTimeout(typeWriter, typingSpeed);
     }
 
-    // Démarrer l'effet
     typeWriter();
 });
