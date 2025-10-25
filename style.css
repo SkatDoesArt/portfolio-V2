@@ -309,6 +309,7 @@ header {
     background-clip: text;
     letter-spacing: -0.02em;
     position: relative;
+
 }
 
 .section-title::after {
@@ -395,6 +396,176 @@ header {
 }
 
 
+/* Projects Section */
+.projects {
+    min-height: 100vh;
+    padding: 8rem 0 6rem;
+    position: relative;
+    background-color: #020411;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 170, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+.projects-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #00AAff 0%, #00AAFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #00AAff 0%, #00AAFF 100%);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #00AAFF;
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 170, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    width: 50px;
+    height: 50px;
+    background: #00AAFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00AAFF;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-link:hover {
+    transform: scale(1.1);
+    background: white;
+    color: #ffffff;
+}
+
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-info h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.project-info p {
+    font-family: 'Open Sans', sans-serif;
+    color: #dacece;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tech span {
+    background: rgba(0, 170, 255, 0.1);
+    color: #00AAFF;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
+
 /* ====== RESPONSIVE MEDIA QUERIES ====== */
 
 @media (max-width: 992px) {
@@ -432,6 +603,11 @@ header {
 
     .section-title::after {
         margin: 1rem auto 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
     }
 }
 
@@ -479,6 +655,11 @@ header {
 
     .highlight {
         padding: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
 }
@@ -536,5 +717,9 @@ header {
 
     .highlight:hover {
         transform: none;
+    }
+
+    .project-info {
+        padding: 1.5rem;
     }
 }
