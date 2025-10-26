@@ -77,4 +77,73 @@ const heroSubtitle = document.getElementById('profession-rotation');
     }
 
     typeWriter();
+
+    // carousel functionality
+    const carousel = document.querySelector('.projects-grid');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                const cards = document.querySelectorAll('.project-card');
+                const cardWidth = 370; // Largeur d'une carte + gap (350px + 20px de gap)
+
+                let currentIndex = 0;
+                const visibleCards = calculateVisibleCards();
+
+                const maxIndex = cards.length - visibleCards;
+
+                // Fonction pour calculer le nombre de cartes visibles
+                function calculateVisibleCards() {
+                    if (window.innerWidth >= 1200) return 3;
+                    if (window.innerWidth >= 768) return 2;
+                    return 1;
+                }
+
+                // Fonction pour mettre à jour le carousel
+                function updateCarousel() {
+                    if (currentIndex > maxIndex) currentIndex = maxIndex;
+                    if (currentIndex < 0) currentIndex = 0;
+
+                    const offset = -currentIndex * cardWidth;
+                    carousel.style.transform = `translateX(${offset}px)`;
+
+
+                    // Désactive les boutons si on est au début ou à la fin
+                    prevBtn.style.opacity = currentIndex === 0 ? 0.5 : 1;
+                    prevBtn.style.cursor = currentIndex === 0 ? 'not-allowed' : 'pointer';
+                    nextBtn.style.opacity = currentIndex >= maxIndex ? 0.5 : 1;
+                    nextBtn.style.cursor = currentIndex >= maxIndex ? 'not-allowed' : 'pointer';
+                }
+
+                // Fonction pour aller à un slide spécifique
+                function goToSlide(index) {
+                    currentIndex = index;
+                    updateCarousel();
+                }
+
+                // Événements pour les boutons
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateCarousel();
+                    }
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        updateCarousel();
+                    }
+                });
+
+                // Gestion du redimensionnement
+                window.addEventListener('resize', () => {
+                    const newVisibleCards = calculateVisibleCards();
+                    if (newVisibleCards !== visibleCards) {
+                        visibleCards = newVisibleCards;
+                        updateCarousel();
+                    }
+                });
+
+                // Initialisation
+                updateCarousel();
+
 });
