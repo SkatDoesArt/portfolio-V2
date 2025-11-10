@@ -102,9 +102,8 @@ const heroSubtitle = document.getElementById('profession-rotation');
                     if (currentIndex > maxIndex) currentIndex = maxIndex;
                     if (currentIndex < 0) currentIndex = 0;
 
-                    const offset = -currentIndex * cardWidth;
-                    carousel.style.transform = `translateX(${offset}px)`;
-
+                    const offset = currentIndex * cardWidth;
+                    document.querySelector('.projects-grid-container').scrollTo({ top: 0, left: offset, behavior: 'smooth'});
 
                     // Désactive les boutons si on est au début ou à la fin
                     prevBtn.style.opacity = currentIndex === 0 ? 0.5 : 1;

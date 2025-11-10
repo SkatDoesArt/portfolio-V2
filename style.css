@@ -567,7 +567,7 @@ header {
 .projects-grid-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
     padding-bottom: 80px;
 }
 
@@ -576,7 +576,6 @@ header {
     display: flex;
     transition: transform 0.5s ease;
     gap: 2rem;
-    width: max-content;
 }
 
 /* Carousel Item */
