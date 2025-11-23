@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap">
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://icons8.com/icons/set/kotlin">
         <script type="text/javascript" src="main.js" defer></script>
     </head>
     <body>
@@ -25,7 +27,7 @@
                             <a href="Index.html#projects">Projects</a>
                         </li>
                         <li>
-                            <a href="Index.html#Skills">Skills</a>
+                            <a href="Index.html#skills">Skills</a>
                         </li>
                         <li>
                             <a href="Index.html#Contact">Contact</a>
@@ -62,7 +64,7 @@
                 </div>
                 <div class="butn-home">
                     <button class="btn btn-home1">Contact me</button>
-                    <button class="btn btn-home2">Download CV</button>
+                    <button class="btn btn-home2" download="">Download CV</button>
                 </div>
             </div>
         </section>
@@ -74,7 +76,7 @@
                 <div class="content-about">
                     <h2 class="section-title">About Me</h2>
                     <div class="text-about">
-                        <p>I’m Zahra Salou, an 18-year-old computer science student in Nantes, France, passionate about blending design and technology. My IT journey started with a two-month intensive training at BecomTech, where I learned web development (HTML, CSS, JavaScript) and connected with professionals from startups to companies like ENERGIE.</p>
+                        <p>I’m Zahra Salou, an 19-year-old computer science student in Nantes, France, passionate about blending design and technology. My IT journey started with a two-month intensive training at BecomTech, where I learned web development (HTML, CSS, JavaScript) and connected with professionals from startups to companies like ENERGIE.</p>
                         <p>I specialize in creating visually compelling, user-friendly digital experiences, combining creative design with technical precision. My approach is both imaginative and rigorous—I thrive on challenges and love refining every detail.</p>
                         <p>Beyond coding, you’ll find me drawing, gaming (reclaiming my Valorant peak Elo!), or brainstorming new ideas. Driven by curiosity, I’m always eager to learn, collaborate, and contribute to meaningful projects.</p>
                     </div>
@@ -271,18 +273,260 @@
                 </button>
             </div>
         </section>
-        <!-- <section class="skills" id="skills">
+        <section class="skills" id="skills">
             <div class="container-skills">
                 <h2 class="section-title">Skills & Expertise</h2>
                 <div class="skills-content">
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <h3>Web Development</h3>
-                            <p>Proficient in HTML, CSS, and JavaScript for building responsive and user-friendly websites.</p>
+                            <h3>Frontend Development</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML5</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS3</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-js-square"></i>
+                                    <span>JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend Development</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fab fa-python"></i>
+                                    <span>Python</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24" fill="#00AAFF">
+                                        <path d="M11.59 3L3 11.59 3 3zM20.59 3L3 20.58 3 14.41 14.41 3zM21 21L5.42 21 13.205 13.205z"></path>
+                                    </svg>
+                                    <span>Kotlin</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-java"></i>
+                                    <span>Java</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-golang"></i>
+                                    <span>Golang</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-php"></i>
+                                    <span>PHP</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>DataBase Management</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>SQL Oracle</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>DevOps & Tools</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fab fa-git-alt"></i>
+                                    <span>Git</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-docker"></i>
+                                    <span>Docker</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>VSCode</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24" fill="#00AAFF">
+                                        <path d="M2,2v20h20V2H2z M4.75,11.375H6V6H4.75V4.375H9V6H7.75v5.375H9V13H4.75V11.375z M11.5,19.25H4V18h7.5V19.25z M16,9.875 c0,1.125-0.25,3.25-3,3.25c-1.5,0-2.315-0.902-2.625-1.271l1.154-1.319c0.208,0.231,0.721,0.84,1.471,0.84 c1.125,0,1.125-1.125,1.125-1.5v-5.5H16V9.875z"></path>
+                                    </svg>
+                                    <span>IntelliJ IDEA</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>UI/UX Design</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fab fa-figma"></i>
+                                    <span>Figma</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" fill="#00AAFF">
+                                        <path d="M 25 2 C 12.318 2 2 12.317 2 25 C 2 37.683 12.318 48 25 48 C 37.682 48 48 37.683 48 25 C 48 12.317 37.682 2 25 2 z M 15.117188 17.082031 C 16.591187 17.082031 17.691703 18.136484 17.845703 19.396484 C 17.984703 20.531484 17.530484 21.513438 16.271484 22.148438 C 15.629484 22.474438 15.310937 22.457734 15.210938 22.302734 C 15.143937 22.198734 15.181547 22.024969 15.310547 21.917969 C 16.494547 20.928969 16.515953 20.116656 16.376953 18.972656 C 16.286953 18.236656 15.802766 17.765625 15.259766 17.765625 C 12.932766 17.765625 9.5945937 22.98425 10.058594 26.78125 C 10.239594 28.26125 11.148766 29.974609 13.009766 29.974609 C 13.629766 29.974609 14.286094 29.799813 14.871094 29.507812 C 15.892094 28.985813 16.470781 28.573437 17.050781 27.898438 C 16.907781 26.142437 18.41425 23.9375 20.65625 23.9375 C 21.62625 23.9375 22.428438 24.327422 22.523438 25.107422 C 22.642437 26.080422 21.814906 26.275391 21.503906 26.275391 C 21.231906 26.275391 20.795625 26.198312 20.765625 25.945312 C 20.732625 25.672313 21.352391 25.828078 21.275391 25.205078 C 21.227391 24.816078 20.823547 24.679687 20.435547 24.679688 C 19.039547 24.679688 18.268016 26.626938 18.416016 27.835938 C 18.483016 28.381937 18.763578 28.925781 19.267578 28.925781 C 19.674578 28.925781 20.260328 28.341375 20.486328 27.484375 C 20.629328 26.900375 21.182797 26.511719 21.591797 26.511719 C 21.804797 26.511719 21.952516 26.609219 21.978516 26.824219 C 21.987516 26.902219 21.980078 26.999234 21.955078 27.115234 C 21.908078 27.368234 21.714609 28.212719 21.724609 28.386719 C 21.731609 28.538719 21.818031 28.746094 22.082031 28.746094 C 22.291031 28.746094 23.061438 28.332359 23.773438 27.693359 C 23.997438 26.537359 24.272922 25.107141 24.294922 24.994141 C 24.381922 24.525141 24.550953 24.042969 25.501953 24.042969 C 25.696953 24.042969 25.843094 24.139047 25.871094 24.373047 C 25.880094 24.450047 25.872656 24.550016 25.847656 24.666016 L 25.582031 25.867188 C 26.415031 24.756187 27.712281 23.941406 28.488281 23.941406 C 28.818281 23.941406 29.072234 24.115797 29.115234 24.466797 C 29.139234 24.661797 29.082125 24.991328 28.953125 25.361328 C 28.677125 26.120328 28.366156 27.262141 28.160156 28.244141 C 28.116156 28.453141 28.189313 28.767578 28.570312 28.767578 C 28.875312 28.767578 29.854531 28.395562 30.644531 27.351562 C 30.639531 27.203563 30.636719 27.054344 30.636719 26.902344 C 30.636719 26.084344 30.694609 25.421547 30.849609 24.935547 C 31.004609 24.428547 31.645312 23.943359 32.070312 23.943359 C 32.284312 23.943359 32.439453 24.059969 32.439453 24.292969 C 32.439453 24.370969 32.419859 24.469406 32.380859 24.566406 C 32.090859 25.423406 31.935547 26.221531 31.935547 27.019531 C 31.935547 27.467531 32.032859 28.189594 32.130859 28.558594 C 32.149859 28.636594 32.169094 28.714844 32.246094 28.714844 C 32.382094 28.714844 33.292172 27.817563 33.951172 26.726562 C 33.368172 26.356562 33.039062 25.674891 33.039062 24.837891 C 33.039062 23.435891 33.8735 22.714844 34.6875 22.714844 C 35.3275 22.714844 35.908203 23.182187 35.908203 24.117188 C 35.908203 24.702188 35.675656 25.363859 35.347656 26.005859 C 35.347656 26.005859 35.483969 26.025391 35.542969 26.025391 C 36.046969 26.025391 36.434438 25.791109 36.648438 25.537109 C 36.745438 25.427109 36.835875 25.341016 36.921875 25.291016 C 37.570875 24.507016 38.522672 23.939453 39.638672 23.939453 C 40.588672 23.939453 41.408906 24.310844 41.503906 25.089844 C 41.624906 26.082844 40.777328 26.277344 40.486328 26.277344 C 40.196328 26.277344 39.759516 26.198312 39.728516 25.945312 C 39.697516 25.692312 40.333766 25.829562 40.259766 25.226562 C 40.211766 24.836562 39.805969 24.679688 39.417969 24.679688 C 38.117969 24.679688 37.224484 26.413453 37.396484 27.814453 C 37.465484 28.379453 37.726469 28.925781 38.230469 28.925781 C 38.637469 28.925781 39.246703 28.340375 39.470703 27.484375 C 39.614703 26.919375 40.164266 26.511719 40.572266 26.511719 C 40.766266 26.511719 40.934891 26.60975 40.962891 26.84375 C 40.976891 26.96075 40.929891 27.213906 40.712891 28.128906 C 40.623891 28.517906 40.605672 28.848094 40.638672 29.121094 C 40.708672 29.686094 40.967031 30.057484 41.207031 30.271484 C 41.294031 30.348484 41.344562 30.445859 41.351562 30.505859 C 41.371562 30.658859 41.254547 30.794922 41.060547 30.794922 C 41.002547 30.794922 40.925328 30.794859 40.861328 30.755859 C 39.862328 30.346859 39.447078 29.665484 39.330078 29.021484 C 38.945078 29.508484 38.435109 29.779297 37.912109 29.779297 C 37.020109 29.779297 36.149391 29.000281 36.025391 27.988281 C 35.974391 27.572281 36.024156 27.124547 36.160156 26.685547 C 35.798156 26.909547 35.407594 27.033203 35.058594 27.033203 C 34.941594 27.033203 34.846469 27.034625 34.730469 27.015625 C 33.858469 28.280625 32.946047 29.156875 32.248047 29.546875 C 31.958047 29.702875 31.687188 29.78125 31.492188 29.78125 C 31.336188 29.78125 31.162937 29.741469 31.085938 29.605469 C 30.904937 29.301469 30.783844 28.822766 30.714844 28.259766 C 29.795844 29.266766 28.506344 29.775391 27.902344 29.775391 C 27.203344 29.775391 26.822141 29.346125 26.744141 28.703125 C 26.718141 28.457125 26.725531 28.209844 26.769531 27.964844 C 27.000531 26.523844 27.531047 25.628469 27.498047 25.355469 C 27.488047 25.277469 27.443719 25.238281 27.386719 25.238281 C 26.940719 25.238281 25.374719 26.854781 25.136719 27.925781 L 24.951172 28.783203 C 24.830172 29.387203 24.237078 29.775391 23.830078 29.775391 C 23.636078 29.775391 23.488891 29.679844 23.462891 29.464844 C 23.454891 29.366844 23.463328 29.267875 23.486328 29.171875 L 23.572266 28.720703 C 22.727266 29.352703 21.816625 29.779297 21.390625 29.779297 C 20.807625 29.779297 20.481234 29.466047 20.365234 28.998047 C 19.980234 29.505047 19.470734 29.779297 18.927734 29.779297 C 18.234734 29.779297 17.567094 29.321578 17.246094 28.642578 C 16.789094 29.155578 16.249562 29.656312 15.601562 30.070312 C 14.645563 30.675313 13.580312 31.162109 12.320312 31.162109 C 11.157312 31.162109 10.169047 30.539203 9.6230469 30.033203 C 8.8130469 29.274203 8.3838125 28.144328 8.2578125 27.111328 C 7.8598125 23.859328 9.8402031 19.593609 12.908203 17.724609 C 13.612203 17.295609 14.400188 17.082031 15.117188 17.082031 z M 34.222656 23.466797 C 33.969656 23.466797 33.873047 23.817375 33.873047 24.109375 C 33.873047 24.655375 34.145141 25.220844 34.494141 25.589844 C 34.630141 25.219844 34.707031 24.849516 34.707031 24.478516 C 34.707031 23.778516 34.435656 23.466797 34.222656 23.466797 z"></path>
+                                    </svg>
+                                    <span>Canva</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Art Tools</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>Ibis Paint</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>MediBang</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>Procreate</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Video Editing</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <i class="fas fa-film"></i>
+                                    <span>Capcut</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50" fill="#00AAFF">
+                                        <path d="M37,4H13c-4.962,0-9,4.037-9,9v24c0,4.963,4.038,9,9,9h24c4.962,0,9-4.037,9-9V13C46,8.037,41.962,4,37,4z M20.192,30.218	c-0.364-0.418-0.321-1.052,0.097-1.416c0.418-0.364,1.052-0.321,1.416,0.097c0.03,0.034,0.06,0.075,0.084,0.112	c0.538,0.826,1.438,1.463,2.476,1.691c1.037,0.23,2.193,0.083,3.16-0.489c0.968-0.56,1.732-1.532,2.007-2.68	C29.653,26.396,29.693,25.049,29,24c0.419,0.466,0.678,1.074,0.806,1.697c0.125,0.625,0.189,1.258,0.123,1.92	c-0.131,1.313-0.849,2.58-1.936,3.422c-1.082,0.855-2.522,1.269-3.946,1.149c-1.43-0.116-2.843-0.808-3.837-1.949L20.192,30.218z M25,36c-0.552,0.025-1.021-0.402-1.046-0.954c-0.025-0.552,0.402-1.021,0.954-1.046c0.029-0.001,0.063-0.001,0.092,0	c1.643,0.075,3.328-0.459,4.671-1.522c1.352-1.054,2.311-2.626,2.7-4.351c0.386-1.726,0.213-3.629-0.528-5.293	C31.119,21.156,29.733,19.749,28,19c1.79,0.588,3.366,1.899,4.294,3.607c0.942,1.701,1.329,3.711,1.069,5.692	c-0.263,1.973-1.196,3.901-2.702,5.31C29.17,35.027,27.127,35.912,25,36z M36.723,27.69c-0.102,2.632-1.141,5.282-3.016,7.267	l-0.006,0.007c-0.38,0.402-1.013,0.42-1.415,0.04s-0.42-1.013-0.04-1.415c0.015-0.015,0.032-0.032,0.047-0.047	c1.63-1.512,2.677-3.674,2.917-5.965c0.265-2.29-0.28-4.68-1.551-6.673c-1.254-2.002-3.204-3.584-5.453-4.471	c-2.251-0.883-4.801-1.073-7.206-0.508c2.361-0.728,4.968-0.728,7.375,0.031c2.402,0.762,4.6,2.286,6.121,4.377	C36.03,22.408,36.852,25.051,36.723,27.69z M39.019,28.031C38.467,28.042,38.01,27.603,38,27.05c0-0.016,0-0.035,0-0.05	c0.094-3.039-0.846-6.116-2.805-8.498c-1.933-2.397-4.781-4.046-7.86-4.713c-3.078-0.677-6.403-0.462-9.349,0.795	C15.03,15.816,12.515,18.115,11,21c1.365-2.956,3.792-5.438,6.782-6.865c2.979-1.454,6.443-1.866,9.741-1.319	c3.302,0.539,6.504,2.145,8.807,4.712C38.66,20.07,39.934,23.542,40,27l0,0.012C40.011,27.564,39.572,28.021,39.019,28.031z"></path>
+                                    </svg>
+                                    <span>Alight Motion</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Conception Tools</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30" fill="#00AAFF">
+                                        <path d="M28.26,5.13L15.58,1.18c-0.39-0.12-0.81-0.12-1.19,0L1.7,5.13C1.28,5.26,1,5.65,1,6.09v17.44c0,0.41,0.24,0.77,0.62,0.93	l12.6,5.22c0.49,0.21,1.04,0.21,1.53,0l12.6-5.22c0.37-0.16,0.61-0.52,0.61-0.93V6.09C28.96,5.65,28.68,5.26,28.26,5.13z M6.91,15.22c0.31,0.38,0.78,0.8,1.42,1.26c0.5,0.36,0.94,0.72,1.31,1.08c0.37,0.36,0.68,0.73,0.93,1.11	c0.25,0.38,0.43,0.78,0.55,1.19c0.12,0.42,0.18,0.86,0.18,1.33c0,0.49-0.07,0.91-0.23,1.25c-0.15,0.34-0.37,0.6-0.65,0.77	c-0.28,0.18-0.62,0.26-1.01,0.26c-0.4,0.01-0.83-0.08-1.31-0.26c-0.43-0.15-0.85-0.38-1.26-0.68c-0.41-0.3-0.77-0.66-1.09-1.08	c-0.33-0.42-0.58-0.88-0.78-1.4c-0.19-0.52-0.29-1.08-0.29-1.68l1.5,0.52c0,0.36,0.05,0.69,0.15,0.99c0.1,0.29,0.23,0.55,0.4,0.78	c0.17,0.22,0.37,0.42,0.61,0.58c0.23,0.16,0.48,0.29,0.76,0.38c0.53,0.2,0.94,0.2,1.21,0.01c0.28-0.18,0.41-0.51,0.41-0.98	c0-0.24-0.02-0.45-0.08-0.66c-0.05-0.2-0.15-0.4-0.29-0.61c-0.14-0.2-0.34-0.41-0.58-0.64c-0.25-0.23-0.57-0.48-0.95-0.77	c-0.42-0.3-0.81-0.62-1.16-0.95C6.3,16.69,6,16.34,5.75,15.98c-0.25-0.36-0.45-0.75-0.59-1.15c-0.14-0.41-0.21-0.85-0.21-1.31	s0.07-0.86,0.22-1.19c0.15-0.34,0.35-0.61,0.62-0.81c0.28-0.2,0.6-0.32,0.98-0.36c0.38-0.04,0.81,0.02,1.27,0.16	c0.5,0.15,0.95,0.39,1.36,0.7c0.4,0.32,0.74,0.68,1.02,1.09c0.29,0.42,0.5,0.87,0.65,1.35c0.15,0.48,0.23,0.96,0.23,1.45L9.72,15.4	c0-0.28-0.03-0.55-0.1-0.81s-0.17-0.5-0.31-0.72c-0.14-0.22-0.32-0.41-0.53-0.57c-0.21-0.16-0.46-0.29-0.75-0.38	c-0.27-0.09-0.51-0.12-0.7-0.11c-0.2,0.02-0.37,0.08-0.5,0.18c-0.13,0.1-0.22,0.24-0.28,0.41c-0.07,0.18-0.1,0.38-0.1,0.6	C6.45,14.43,6.61,14.83,6.91,15.22z M24.96,21.84l-1.31,0.53l-1.53-7.92l-1.59,9.19l-1.39,0.56l-1.95-11.23l1.46-0.5l1.3,8.46	l1.57-9.44l1.18-0.4l1.51,8.19l1.21-9.12l1.34-0.46L24.96,21.84z"></path>
+                                    </svg>
+                                    <span>SolidWorks</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Sweet Home 3D</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Sketch Up</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span>French</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>English</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Arabic</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Spanish</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>German</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </body>
 </html>
