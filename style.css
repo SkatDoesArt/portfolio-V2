@@ -738,8 +738,124 @@ header {
     transition: width 1s ease;
 }
 
+/* Contact Section */
+.contact {
+    min-height: 100vh;
+    padding: 8rem 0 6rem;
+    position: relative;
+/*     background-color: #020411; */
+}
 
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 170, 255, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+}
 
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, #00AAff 0%, #00AAFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.contact .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #00AAff 0%, #00AAFF 100%);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    border-color: #00AAFF;
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.2);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00AAff 0%, #00AAFF 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #020411;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-details h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-details p {
+    color: #a0a0a0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-details a {
+    color: #00AAFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
 
 /* Responsive Design for Projects Section */
 @media (max-width: 1200px) {
@@ -782,6 +898,17 @@ header {
 }
 
 @media (max-width: 768px) {
+
+    .contact-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
 
     .skills-grid {
         grid-template-columns: 1fr;
@@ -834,6 +961,7 @@ header {
 }
 
 @media (max-width: 480px) {
+
 
 
     .skill-category {
