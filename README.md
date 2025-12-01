@@ -12,7 +12,7 @@ This portfolio is a modern and responsive redesign of my previous version. It hi
 ## 🖼️ Screenshots
 
 - Home: 
-<img src= home.png alt="HomeScreen"/>
+<img src= Other/home.png alt="HomeScreen"/>
 
 ---
 
