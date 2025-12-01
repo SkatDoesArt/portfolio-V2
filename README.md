@@ -7,6 +7,8 @@
 ## 📌 About
 This portfolio is a modern and responsive redesign of my previous version. It highlights my work in web development, creative projects (webtoons, games, promotional websites), and technical skills.
 
+- site : https://zahra-salou.netlify.app/
+
 ---
 
 ## 🖼️ Screenshots
