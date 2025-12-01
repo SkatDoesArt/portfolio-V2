@@ -631,7 +631,7 @@ header {
 .container-skills {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15rem;
+/*     padding: 0 15rem; */
 }
 
 .skills {
