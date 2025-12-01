@@ -146,3 +146,11 @@ const heroSubtitle = document.getElementById('profession-rotation');
                 updateCarousel();
 
 });
+
+// Menu Hamburger
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
