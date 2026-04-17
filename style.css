@@ -568,7 +568,6 @@ header {
 .projects-grid-container {
     position: relative;
     width: 100%;
-    overflow-x: scroll;
     overflow-x: hidden;
     padding-bottom: 80px;
 }
